@@ -10,7 +10,7 @@
     try {
       const origFetch = window.fetch;
       window.fetch = async function(...args) {
-        let [resource, config] = args;
+        let [resource, config] = args;   
         if (typeof resource === 'string') {
           resource = resource.replace(/demo-trade/g, 'trade').replace(/\/demo/g, '/trade');
         } else if (resource instanceof Request) {
